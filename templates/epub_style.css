@@ -1,0 +1,101 @@
+/* Shared ePub stylesheet for essays */
+
+body {
+  font-family: "Georgia", "DejaVu Serif", serif;
+  line-height: 1.6;
+  margin: 1em;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+h1 {
+  font-size: 1.6em;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  page-break-before: always;
+  text-align: left;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-top: 1.5em;
+  margin-bottom: 0.4em;
+  text-align: left;
+}
+
+h3 {
+  font-size: 1.1em;
+  margin-top: 1.2em;
+  margin-bottom: 0.3em;
+}
+
+p {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+  text-indent: 0;
+}
+
+blockquote {
+  margin: 1em 1.5em;
+  padding-left: 0.8em;
+  border-left: 3px solid #666;
+  font-style: italic;
+  color: #333;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1em auto;
+  font-size: 0.9em;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 0.4em 0.6em;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+figure {
+  width: 100%;
+  margin: 1.5em 0;
+  padding: 0;
+  text-align: center;
+}
+
+figure img,
+img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+  margin: 1em auto;
+}
+
+figcaption, .caption {
+  font-size: 0.85em;
+  color: #555;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+code {
+  font-family: "DejaVu Sans Mono", monospace;
+  font-size: 0.85em;
+  background-color: #f5f5f5;
+  padding: 0.1em 0.3em;
+}

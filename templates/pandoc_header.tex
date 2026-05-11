@@ -1,0 +1,51 @@
+% Pandoc header — shared template for essay PDF generation
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{array}
+
+% Force TOC to end on its own page, then add list of figures and tables
+\apptocmd{\tableofcontents}{%
+  \clearpage
+  \listoffigures
+  \listoftables
+  \clearpage
+}{}{}
+
+% Spanish (Spain) labels — must override after babel loads
+\AtBeginDocument{%
+  \renewcommand{\listtablename}{Índice de tablas}%
+  \renewcommand{\listfigurename}{Índice de figuras}%
+  \renewcommand{\tablename}{Tabla}%
+}
+
+% Index of terms
+\usepackage{makeidx}
+\makeindex
+\renewcommand{\indexname}{Índice de términos}
+\AtEndDocument{\clearpage\printindex}
+\setlength{\columnsep}{28pt}
+\setlength{\columnseprule}{0.2pt}
+\renewcommand{\indexspace}{\par\addvspace{0.8em}}
+
+% Table spacing for readability
+\setlength{\extrarowheight}{2pt}
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{8pt}
+
+% Title page customization with optional cover image
+\makeatletter
+\renewcommand{\maketitle}{%
+  \begin{titlepage}
+    \centering
+    {\LARGE \@title \par}
+    \vspace{1.0em}
+    \IfFileExists{portada.png}{%
+      \includegraphics[width=0.88\textwidth,height=0.62\textheight,keepaspectratio]{portada.png}\par
+      \vspace{1.0em}
+    }{}%
+    {\large \@author \par}
+    \vspace{1.5em}
+  \end{titlepage}
+}
+\makeatother
+\apptocmd{\maketitle}{\clearpage}{}{}
