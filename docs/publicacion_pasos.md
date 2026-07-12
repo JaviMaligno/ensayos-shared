@@ -1,3 +1,5 @@
+onvier
+
 # Guía de publicación — Pasos genéricos
 
 Pasos reutilizables para publicar cualquier ensayo del ecosistema. Cada ensayo tiene su propio `docs/publicacion_metadata.md` con los datos específicos (título, descripción, categorías, estado por plataforma, enlaces).
@@ -6,15 +8,15 @@ Pasos reutilizables para publicar cualquier ensayo del ecosistema. Cada ensayo t
 
 ### Formatos a tener listos
 
-| Formato | Para qué | Cómo generar |
-|---|---|---|
-| ePub | Ebooks en todas las plataformas | `ensayo/build_epub.sh` |
-| PDF (lectura) | Payhip, venta directa | `ensayo/build_pdf.sh` |
-| PDF (KDP 6×9") | Amazon tapa blanda | `ensayo/build_pdf.sh --amazon` |
-| Portada ebook | Todas las plataformas | Mínimo 2560×1600px (KDP recomienda) |
-| Portada wraparound | Tapa blanda (KDP, D2D print) | Lomo + contraportada. KDP tiene calculadora de lomo. |
-| Portada cuadrada | Audiobook (InAudio) | Mínimo 3000×3000px |
-| MP3s audiobook | Google Play, Spotify, InAudio | Script `generate_audiobook.py` |
+| Formato            | Para qué                       | Cómo generar                                        |
+| ------------------ | ------------------------------- | ---------------------------------------------------- |
+| ePub               | Ebooks en todas las plataformas | `ensayo/build_epub.sh`                             |
+| PDF (lectura)      | Payhip, venta directa           | `ensayo/build_pdf.sh`                              |
+| PDF (KDP 6×9")    | Amazon tapa blanda              | `ensayo/build_pdf.sh --amazon`                     |
+| Portada ebook      | Todas las plataformas           | Mínimo 2560×1600px (KDP recomienda)                |
+| Portada wraparound | Tapa blanda (KDP, D2D print)    | Lomo + contraportada. KDP tiene calculadora de lomo. |
+| Portada cuadrada   | Audiobook (InAudio)             | Mínimo 3000×3000px                                 |
+| MP3s audiobook     | Google Play, Spotify, InAudio   | Script`generate_audiobook.py`                      |
 
 ### Cuentas necesarias (crear una vez, reusar para todos los ensayos)
 
@@ -158,16 +160,16 @@ Pasos reutilizables para publicar cualquier ensayo del ecosistema. Cada ensayo t
 
 ## Precios recomendados (referencia)
 
-| Plataforma | Precio | Royalty | Notas |
-|---|---|---|---|
-| Payhip | 9.99 € (o PWYW desde 4.99 €) | ~95% | Venta directa, máximo margen |
-| Spotify | Gratis | — | Promocional |
-| Amazon KDP (ebook) | 6.99 € | 70% | Requiere rango 2.99–9.99 para 70% |
-| Amazon KDP (tapa blanda) | 12.99 € | ~60% (~2.70€) | Depende del coste de impresión |
-| Google Play Books | 6.99 € | ~52% | — |
-| D2D ebook (Apple, Kobo, B&N) | 7.99 € | ~60% | D2D se lleva 10% |
-| D2D print | 7.99 € | ~60% | D2D calcula coste impresión |
-| InAudio audiobook | $14.99 USD | Variable | Library price: $29.99 |
+| Plataforma                   | Precio                                        | Royalty        | Notas                              |
+| ---------------------------- | --------------------------------------------- | -------------- | ---------------------------------- |
+| Payhip                       | 9.99 € (o PWYW desde 4.99 €)                | ~95%           | Venta directa, máximo margen      |
+| Spotify                      | Gratis                                        | —             | Promocional                        |
+| Amazon KDP (ebook)           | 6.99 €                                       | 70%            | Requiere rango 2.99–9.99 para 70% |
+| Amazon KDP (tapa blanda)     | 12.99 €                                      | ~60% (~2.70€) | Depende del coste de impresión    |
+| Google Play Books            | 6.99 €                                       | ~52%           | —                                 |
+| D2D ebook (Apple, Kobo, B&N) | 7.99 €                                       | ~60%           | D2D se lleva 10%                   |
+| D2D print                    | 7.99 €                                       | ~60%           | D2D calcula coste impresión       |
+| InAudio audiobook            | $14.99 USD | Variable | Library price: $29.99 |                |                                    |
 
 ---
 
@@ -187,13 +189,13 @@ Capítulos que superan ~30 minutos de audio deben dividirse en partes (Parte 1, 
 
 ### Archivos especiales para InAudio
 
-| Archivo | Función |
-|---|---|
-| `opening_credits.mp3` | Créditos iniciales |
-| `front_matter.mp3` | Nota al lector / materia preliminar |
-| `ending_credits.mp3` | Créditos finales |
-| `retail_sample.mp3` | Muestra sin jingles (para tiendas) |
-| `back_matter.mp3` | Material final |
+| Archivo                 | Función                            |
+| ----------------------- | ----------------------------------- |
+| `opening_credits.mp3` | Créditos iniciales                 |
+| `front_matter.mp3`    | Nota al lector / materia preliminar |
+| `ending_credits.mp3`  | Créditos finales                   |
+| `retail_sample.mp3`   | Muestra sin jingles (para tiendas)  |
+| `back_matter.mp3`     | Material final                      |
 
 ---
 
